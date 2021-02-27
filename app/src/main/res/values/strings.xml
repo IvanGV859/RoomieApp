@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RoomieApp</string>
+    <string name="bt_ingresar">Ingresar</string>
+    <string name="bt_registrar">Registrar</string>
+    <string name="txt_correo">Correo electronico</string>
+    <string name="txt_contrasenia">Contraseña</string>
+    <string name="txt_contrasenia2">Confirmar contraseña</string>
+    <string name="bt_recuperar">Recuperar contraseña</string>
+    <string name="txt_registro">Registro</string>
 </resources>
