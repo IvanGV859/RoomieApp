@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "7699775481",
+    "project_id": "roomieapp-6d3c7",
+    "storage_bucket": "roomieapp-6d3c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7699775481:android:027fb06353e886b6cc8728",
+        "android_client_info": {
+          "package_name": "com.example.roomieapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7699775481-2dmorktceesq7f84jh82baqogdtq4srh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.roomieapp",
+            "certificate_hash": "17e8854aee1b1e86d18a152a2a3882c98dcf445c"
+          }
+        },
+        {
+          "client_id": "7699775481-mr8mcuoaheca83lpt0rggte4addi6upn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcrKD-8wOmEUE1BJH00FVpcv90QwroLgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7699775481-mr8mcuoaheca83lpt0rggte4addi6upn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
