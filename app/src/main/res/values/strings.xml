@@ -7,4 +7,9 @@
     <string name="txt_contrasenia2">Confirmar contraseña</string>
     <string name="bt_recuperar">Recuperar contraseña</string>
     <string name="txt_registro">Registro</string>
+    <string name="bt_cerrar">Cerrar Sesion</string>
+    <string name="bt_buscar">Buscar departamento</string>
+    <string name="bt_ofrecer">Ofrecer departamento</string>
+    <string name="txt_nuevacontra">Nueva Contraseña</string>
+    <string name="bt_restablecer">Restablecer Contraseña</string>
 </resources>
