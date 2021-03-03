@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "7699775481-u4tt3usa2dvlb9lq1irv35mokfg9oujl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.roomieapp",
+            "certificate_hash": "e254996891c4b7e21c94c0e420ddc7d4c6a1f95b"
+          }
+        },
+        {
           "client_id": "7699775481-mr8mcuoaheca83lpt0rggte4addi6upn.apps.googleusercontent.com",
           "client_type": 3
         }
