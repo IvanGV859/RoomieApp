@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RoomieApp</string>
+    <string name="bt_ingresar">Log in</string>
+    <string name="bt_registrar">Register</string>
+    <string name="txt_correo">Email</string>
+    <string name="txt_contrasenia">Password</string>
+    <string name="txt_contrasenia2">Confirm password</string>
+    <string name="bt_recuperar">Recover password</string>
+    <string name="txt_registro">Register</string>
+    <string name="bt_cerrar">Log out</string>
+    <string name="bt_buscar">Find an Apartment</string>
+    <string name="bt_ofrecer">Rent Apartment</string>
+    <string name="txt_nuevacontra">New Password</string>
+    <string name="bt_restablecer">Reset Password</string>
+</resources>
