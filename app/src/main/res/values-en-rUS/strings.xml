@@ -13,4 +13,5 @@
     <string name="bt_ofrecer">Rent Apartment</string>
     <string name="txt_nuevacontra">New Password</string>
     <string name="bt_restablecer">Reset Password</string>
+    <string name="cambiarLenguaje">Change Language</string>
 </resources>
