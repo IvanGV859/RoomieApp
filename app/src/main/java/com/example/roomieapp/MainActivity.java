@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText correo;
     private EditText contrasenia;
     private FirebaseAuth mAuth;
-
+    //Prueba
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
