@@ -3,6 +3,7 @@ package com.example.roomieapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText correo;
     private EditText contrasenia;
     private FirebaseAuth mAuth;
+
+
+
     //Prueba
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                                 Log.d("Exito", "Bienvenido");
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 updateUI(user);
-                                Intent i = new Intent(getApplicationContext(), Principal.class);
+                                Intent i = new Intent(getApplicationContext(), InterfazPrincipal.class);
                                 startActivity(i);
                                 finish();
                             }
