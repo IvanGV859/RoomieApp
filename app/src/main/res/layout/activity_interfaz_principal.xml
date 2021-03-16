@@ -14,7 +14,9 @@
         android:orientation="vertical">
 
         <include
-            layout="@layout/main_toolbar"/>
+            layout="@layout/main_toolbar"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
 
         <TextView
             android:layout_width="match_parent"
