@@ -15,7 +15,7 @@ public class Rentar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rentar);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout = findViewById(R.id.drawer_layout2);
     }
     public void ClickMenu (View view){
         //Open drawer
