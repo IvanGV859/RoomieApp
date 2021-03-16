@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".Aboutus">
-
+    tools:context=".Perfil">
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,20 +16,20 @@
             layout="@layout/main_toolbar"
             android:layout_width="70dp"
             android:layout_height="70dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="AboutUs"
+            android:text="Perfil"
             android:textSize="50sp"
             android:textStyle="bold"
             android:gravity="center"/>
-
     </LinearLayout>
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/white">
+        android:background="#F2EAED">
 
         <include
             layout="@layout/main_nav_drawer"/>

@@ -11,8 +11,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.google.firebase.auth.FirebaseAuth;
-
 public class InterfazPrincipal extends AppCompatActivity {
     //Initialize variable
     DrawerLayout drawerLayout;
@@ -56,14 +54,18 @@ public class InterfazPrincipal extends AppCompatActivity {
         recreate();
     }
 
-    public void ClickDashboard(View view){
+    public void ClickPerfil(View view){
         //Redirect activity to dashboard
-        redirectActivity(this, Dashboard.class);
+        redirectActivity(this, Perfil.class);
     }
 
-    public void ClickAboutUs(View view){
+    public void ClickConfiguracion(View view){
         //Redirect activity to AboutUs
-        redirectActivity(this,Aboutus.class);
+        redirectActivity(this, Configuracion.class);
+    }
+    public void ClickRent(View view){
+        //Redirect activity to AboutUs
+        redirectActivity(this, Rentar.class);
     }
 
     public void ClickLogout(View view){
