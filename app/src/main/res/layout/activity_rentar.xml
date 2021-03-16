@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawer_layout"
-    tools:context=".Aboutus">
+    android:id="@+id/drawer_layout2"
+    tools:context=".Rentar">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,13 +16,15 @@
             layout="@layout/main_toolbar"
             android:layout_width="70dp"
             android:layout_height="70dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="AboutUs"
-            android:textSize="50sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="Rentar Departamentos"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
 
     </LinearLayout>
     <RelativeLayout
@@ -32,7 +34,7 @@
         android:background="@android:color/white">
 
         <include
-            layout="@layout/main_nav_drawer"/>
+            layout="@layout/main_nav_drawer2"/>
 
     </RelativeLayout>
 

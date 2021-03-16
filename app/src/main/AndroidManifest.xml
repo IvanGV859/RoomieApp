@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Aboutus"></activity>
-        <activity android:name=".Dashboard" />
+        <activity android:name=".Rentar"></activity>
+        <activity android:name=".Configuracion" />
+        <activity android:name=".Perfil" />
         <activity android:name=".InterfazPrincipal" />
         <activity android:name=".MenuPrincipal2" />
         <activity android:name=".MenuPrincipal" />

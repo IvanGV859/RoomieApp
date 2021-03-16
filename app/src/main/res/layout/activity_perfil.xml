@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".Dashboard">
+    tools:context=".Perfil">
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Dashboard"
+            android:text="Perfil"
             android:textSize="50sp"
             android:textStyle="bold"
             android:gravity="center"/>
