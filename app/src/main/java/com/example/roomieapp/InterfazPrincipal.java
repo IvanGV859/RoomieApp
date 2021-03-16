@@ -79,7 +79,7 @@ public class InterfazPrincipal extends AppCompatActivity {
         //set title
         builder.setTitle("Logout");
         //Set message
-        builder.setMessage("Esta seguro que quiere cerrar sesion?");
+        builder.setMessage("¿Está seguro que desea cerrar sesión? ");
         //Possitive yes botton
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
