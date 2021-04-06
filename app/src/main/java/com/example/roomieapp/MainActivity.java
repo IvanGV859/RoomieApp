@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                                 Log.d("Exito", "Bienvenido");
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 updateUI(user);
-                                Intent i = new Intent(getApplicationContext(), InterfazPrincipal.class);
+                                Intent i = new Intent(getApplicationContext(), Principal.class);
                                 startActivity(i);
                                 finish();
                             }
