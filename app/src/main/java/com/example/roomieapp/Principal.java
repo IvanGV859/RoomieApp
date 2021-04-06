@@ -25,6 +25,11 @@ public class Principal extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void irRentar (View view){
+        Intent i = new Intent(this, Rentar.class);
+        startActivity(i);
+    }
+
     public void SalirSesion (View view){
         mAuth.signOut();
         Intent i = new Intent(this, MainActivity.class);
