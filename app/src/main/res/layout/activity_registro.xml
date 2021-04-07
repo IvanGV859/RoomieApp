@@ -28,6 +28,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <EditText
+            android:id="@+id/txt_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txt_usuario"
+            android:inputType="textPersonName" />
+
+        <EditText
             android:id="@+id/txt_correo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

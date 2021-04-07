@@ -4,6 +4,7 @@
     <string name="bt_ingresar">Log in</string>
     <string name="bt_registrar">Register</string>
     <string name="txt_correo">Email</string>
+    <string name="txt_usuario">Username</string>
     <string name="txt_contrasenia">Password</string>
     <string name="txt_contrasenia2">Confirm password</string>
     <string name="bt_recuperar">Recover password</string>
