@@ -20,8 +20,8 @@ public class Principal extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
     }
 
-    public void irMenuPrincipal (View view){
-        Intent i = new Intent(this, MenuPrincipal.class);
+    public void Principal (View view){
+        Intent i = new Intent(this, InterfazPrincipal.class);
         startActivity(i);
     }
 
