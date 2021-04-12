@@ -15,6 +15,11 @@
     <string name="txt_nuevacontra">New Password</string>
     <string name="bt_restablecer">Reset Password</string>
     <string name="bt_cambiarLenguaje">Change Language</string>
+    <string name="txt_nombreDepartamento">Department Name</string>
+    <string name="txt_descripcion">Short description</string>
+    <string name="txt_colonia">Suburb</string>
+    <string name="txt_costo">Cost per Month</string>
+    <string name="bt_subirdatos">Upload Data</string>
 
     <string name="abrir">Open</string>
     <string name="cerrar">Close</string>

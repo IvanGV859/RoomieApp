@@ -20,12 +20,51 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Rentar Departamentos"
+            android:textColor="#16235A"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="#16235A"/>
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txt_nombreDepa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txt_nombreDepartamento"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txt_descripDepa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txt_descripcion"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txt_coloniaDepa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txt_colonia"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txt_costoDepa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txt_costo"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="subirDatos"
+            android:text="@string/bt_subirdatos" />
 
 
     </LinearLayout>

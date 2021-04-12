@@ -14,6 +14,11 @@
     <string name="txt_nuevacontra">Nueva Contraseña</string>
     <string name="bt_restablecer">Restablecer Contraseña</string>
     <string name="bt_cambiarLenguaje">Cambiar Lenguaje</string>
+    <string name="txt_nombreDepartamento">Nombre del Departamento</string>
+    <string name="txt_descripcion">Descripcion corta</string>
+    <string name="txt_colonia">Colonia</string>
+    <string name="txt_costo">Costo por mes</string>
+    <string name="bt_subirdatos">Subir Datos</string>
 
     <string name="abrir">Abrir</string>
     <string name="cerrar">Cerrar</string>
