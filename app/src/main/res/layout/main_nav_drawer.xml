@@ -36,10 +36,11 @@
         android:onClick="ClickHome">
 
         <TextView
+            android:id="@+id/txt_inicio"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Inicio"
+            android:text="@string/txt_inicio"
             android:padding="12dp"
             android:layout_marginStart="16dp"/>
 
@@ -58,10 +59,11 @@
         android:onClick="ClickPerfil">
 
         <TextView
+            android:id="@+id/txt_perfil"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Perfil"
+            android:text="@string/txt_perfil"
             android:padding="12dp"
             android:layout_marginStart="16dp"/>
         
@@ -80,10 +82,11 @@
         android:onClick="ClickConfiguracion">
         
         <TextView
+            android:id="@+id/txt_configuracion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Configuracion"
+            android:text="@string/txt_configuracion"
             android:padding="12dp"
             android:layout_marginStart="16dp"/>
         
@@ -102,10 +105,11 @@
         android:onClick="ClickRent">
 
         <TextView
+            android:id="@+id/txt_rentar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Rentar Departamento"
+            android:text="@string/txt_rentar"
             android:padding="12dp"
             android:layout_marginStart="16dp"/>
 
@@ -125,10 +129,11 @@
         android:onClick="ClickLogout">
 
         <TextView
+            android:id="@+id/txt_cerrar_sesion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cerrar Sesion"
+            android:text="@string/txt_cerrar_sesion"
             android:padding="12dp"
             android:layout_marginStart="16dp"/>
 

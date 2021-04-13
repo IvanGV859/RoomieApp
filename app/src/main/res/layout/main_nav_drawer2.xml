@@ -39,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Inicio"
+            android:text="@string/txt_inicio"
             android:padding="12dp"
             android:layout_marginStart="16dp"
             android:textColor="#A4A4BF"/>
@@ -62,7 +62,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Perfil"
+            android:text="@string/txt_perfil"
             android:padding="12dp"
             android:layout_marginStart="16dp"
             android:textColor="#A4A4BF"/>
@@ -85,7 +85,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Configuracion"
+            android:text="@string/txt_configuracion"
             android:padding="12dp"
             android:layout_marginStart="16dp"
             android:textColor="#A4A4BF"/>
@@ -108,7 +108,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ver Departamentos"
+            android:text="@string/bt_ofrecer"
             android:padding="12dp"
             android:layout_marginStart="16dp"
             android:textColor="#A4A4BF"/>
@@ -132,7 +132,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cerrar Sesion"
+            android:text="@string/bt_cerrar"
             android:padding="12dp"
             android:layout_marginStart="16dp"
             android:textColor="#A4A4BF"/>
