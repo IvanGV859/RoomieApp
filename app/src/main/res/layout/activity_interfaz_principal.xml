@@ -37,9 +37,6 @@
         <include
             layout="@layout/main_nav_drawer"/>
 
-
     </RelativeLayout>
-
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

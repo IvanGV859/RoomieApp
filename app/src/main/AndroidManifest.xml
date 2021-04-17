@@ -16,7 +16,6 @@
         <activity android:name=".Perfil" />
         <activity android:name=".InterfazPrincipal" />
         <activity android:name=".MenuPrincipal2" />
-        <activity android:name=".MenuPrincipal" />
         <activity android:name=".ContraseniaNueva" />
         <activity android:name=".Principal" />
         <activity android:name=".Registro" />
