@@ -50,8 +50,8 @@ public class Buscar extends AppCompatActivity {
     }
 
     public void ClickHome(View view){
-        //Recreate activity
-        recreate();
+        //Redirect activity to home
+        Buscar.redirectActivity(this, Principal.class);
     }
 
     public void ClickPerfil(View view){

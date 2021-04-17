@@ -35,7 +35,7 @@
         android:background="#F2EAED">
 
         <include
-            layout="@layout/main_nav_drawer"/>
+            layout="@layout/main_nav_drawer_buscar"/>
 
     </RelativeLayout>
 

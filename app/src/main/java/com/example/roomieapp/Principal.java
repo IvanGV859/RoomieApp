@@ -70,10 +70,6 @@ public class Principal extends AppCompatActivity {
         }
     }
 
-    public void ClickHome(View view){
-        //Recreate activity
-        recreate();
-    }
 
     public void ClickPerfil(View view){
         //Redirect activity to dashboard
@@ -83,10 +79,6 @@ public class Principal extends AppCompatActivity {
     public void ClickConfiguracion(View view){
         //Redirect activity to AboutUs
         redirectActivity(this, Configuracion.class);
-    }
-    public void ClickRent(View view){
-        //Redirect activity to AboutUs
-        redirectActivity(this, Rentar.class);
     }
 
     public void ClickLogout(View view){
