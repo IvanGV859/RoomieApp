@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="combo_municipios">
+        <item>Seleccione un municipio:</item>
+        <item>Abasolo</item>
+        <item>Agualeguas</item>
+        <item>Los Aldamas</item>
+        <item>Allende</item>
+        <item>Anáhuac</item>
+        <item>Apodaca</item>
+        <item>Aramberri</item>
+        <item>Bustamante</item>
+        <item>Cadereyta Jiménez</item>
+        <item>Carmen</item>
+        <item>Cerralvo</item>
+        <item>Ciénega de Flores</item>
+        <item>China</item>
+        <item>Doctor Arroyo</item>
+        <item>Doctor Coss</item>
+        <item>Doctor González</item>
+        <item>Galeana</item>
+        <item>García</item>
+        <item>San Pedro Garza García</item>
+        <item>General Bravo</item>
+        <item>General Escobedo</item>
+        <item>General Terán</item>
+        <item>General Treviño</item>
+        <item>General Zaragoza</item>
+        <item>General Zuazua</item>
+        <item>Guadalupe</item>
+        <item>Los Herreras</item>
+        <item>Higueras</item>
+        <item>Hualahuises</item>
+        <item>Iturbide</item>
+        <item>Juárez</item>
+        <item>Lampazos de Naranjo</item>
+        <item>Linares</item>
+        <item>Marín</item>
+        <item>Melchor Ocampo</item>
+        <item>Mier y Noriega</item>
+        <item>Mina</item>
+        <item>Montemorelos</item>
+        <item>Monterrey</item>
+        <item>Parás</item>
+        <item>Pesquería</item>
+        <item>Los Ramones</item>
+        <item>Rayones</item>
+        <item>Sabinas Hidalgo</item>
+        <item>Salinas Victoria</item>
+        <item>San Nicolás de los Garza</item>
+        <item>Hidalgo</item>
+        <item>Santa Catarina</item>
+        <item>Santiago</item>
+        <item>Vallecillo</item>
+        <item>Villaldama</item>
+    </string-array>
+
+</resources>
