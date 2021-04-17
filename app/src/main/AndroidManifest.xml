@@ -14,9 +14,8 @@
         <activity android:name=".Rentar"></activity>
         <activity android:name=".Configuracion" />
         <activity android:name=".Perfil" />
-        <activity android:name=".InterfazPrincipal" />
+        <activity android:name=".Buscar" />
         <activity android:name=".MenuPrincipal2" />
-        <activity android:name=".MenuPrincipal" />
         <activity android:name=".ContraseniaNueva" />
         <activity android:name=".Principal" />
         <activity android:name=".Registro" />

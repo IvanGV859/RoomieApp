@@ -21,6 +21,13 @@
     <string name="txt_costo">Cost per Month</string>
     <string name="bt_subirdatos">Upload Data</string>
 
+    <string name="txt_inicio">Home</string>
+    <string name="txt_perfil">Profile</string>
+    <string name="txt_configuracion">Settings</string>
+    <string name="txt_rentar">Rent Apartment</string>
+    <string name="txt_cerrar_sesion">Log Out</string>
+    <string name="txt_menu_principal">Home</string>
+
     <string name="abrir">Open</string>
     <string name="cerrar">Close</string>
 </resources>

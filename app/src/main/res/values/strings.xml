@@ -20,6 +20,14 @@
     <string name="txt_costo">Costo por mes</string>
     <string name="bt_subirdatos">Subir Datos</string>
 
+    <string name="txt_inicio">Inicio</string>
+    <string name="txt_perfil">Perfil</string>
+    <string name="txt_configuracion">Configuracion</string>
+    <string name="txt_rentar">Rentar Departamento</string>
+    <string name="txt_cerrar_sesion">Cerrar Sesion</string>
+    <string name="txt_menu_principal">Menú Principal</string>
+
+
     <string name="abrir">Abrir</string>
     <string name="cerrar">Cerrar</string>
 </resources>

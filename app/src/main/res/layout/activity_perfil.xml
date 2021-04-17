@@ -17,13 +17,18 @@
             android:layout_width="70dp"
             android:layout_height="70dp" />
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Perfil"
             android:textSize="50sp"
             android:textStyle="bold"
             android:gravity="center"/>
+        
+        
+
+
+
     </LinearLayout>
     <RelativeLayout
         android:layout_width="300dp"
@@ -32,7 +37,7 @@
         android:background="#F2EAED">
 
         <include
-            layout="@layout/main_nav_drawer"/>
+            layout="@layout/main_nav_drawer_buscar"/>
 
     </RelativeLayout>
 

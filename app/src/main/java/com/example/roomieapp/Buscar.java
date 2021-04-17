@@ -11,14 +11,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class InterfazPrincipal extends AppCompatActivity {
+public class Buscar extends AppCompatActivity {
     //Initialize variable
     DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_interfaz_principal);
+        setContentView(R.layout.activity_buscar);
 
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -50,8 +50,8 @@ public class InterfazPrincipal extends AppCompatActivity {
     }
 
     public void ClickHome(View view){
-        //Recreate activity
-        recreate();
+        //Redirect activity to home
+        Buscar.redirectActivity(this, Principal.class);
     }
 
     public void ClickPerfil(View view){

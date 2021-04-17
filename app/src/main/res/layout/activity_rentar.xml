@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout2"
     tools:context=".Rentar"
-    android:background="#A4A4BF">
+    android:background="#F2EAED">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,7 +75,7 @@
         android:background="@android:color/white">
 
         <include
-            layout="@layout/main_nav_drawer2"/>
+            layout="@layout/main_nav_drawer_rentar"/>
 
     </RelativeLayout>
 

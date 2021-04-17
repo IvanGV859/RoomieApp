@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
     tools:context=".Principal">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/main_toolbar"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -61,7 +66,7 @@
                                     android:id="@+id/txtLibr"
                                     android:layout_below="@+id/imgLibr"
                                     android:layout_centerHorizontal="true"
-                                    android:text="Buscar Departamento"
+                                    android:text="@string/bt_buscar"
                                     android:textSize="15sp"
                                     android:textStyle="bold"
                                     android:textColor="#000000"
@@ -116,7 +121,7 @@
                                     android:id="@+id/txtLapiz"
                                     android:layout_below="@+id/imgLapiz"
                                     android:layout_centerHorizontal="true"
-                                    android:text="Rentar Departamento"
+                                    android:text="@string/bt_ofrecer"
                                     android:textSize="15sp"
                                     android:textStyle="bold"
                                     android:textColor="#000000"
@@ -145,52 +150,7 @@
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="40dp"
                         android:gravity="center"
-                        android:orientation="horizontal"
-                        >
-
-                        <LinearLayout
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent">
-
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <ImageView
-                                    android:id="@+id/imgCuader"
-                                    android:layout_centerInParent="true"
-                                    android:src="@drawable/logout"
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"/>
-
-                                <TextView
-                                    android:id="@+id/txtCuader"
-                                    android:layout_below="@+id/imgCuader"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="Cerrar Sesion"
-                                    android:textSize="12sp"
-                                    android:textStyle="bold"
-                                    android:textColor="#000000"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"/>
-
-                                <Button
-                                    android:id="@+id/button4"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentTop="true"
-                                    android:background="@android:color/transparent"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentLeft="true"
-                                    android:onClick="SalirSesion"/>
-
-                            </RelativeLayout>
-
-                        </LinearLayout>
+                        android:orientation="horizontal">
 
                     </LinearLayout>
 
@@ -198,10 +158,20 @@
 
             </RelativeLayout>
 
-
         </LinearLayout>
 
-    </ScrollView>
+    </LinearLayout>
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#F2EAED">
+
+        <include
+            layout="@layout/main_nav_drawer_principal"/>
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
 

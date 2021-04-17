@@ -2,15 +2,15 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#16235A">
+    android:background="#F2EAED"
+    android:orientation="vertical">
     
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_margin="16dp"
         android:onClick="ClickLogo"
-        android:src="@drawable/ac_logo"/>
+        android:src="@drawable/ic_logo_bl"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -19,14 +19,14 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:textColor="#A4A4BF"/>
+        android:textColor="#16235A"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#A4A4BF"/>
+        android:background="#2A3457"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,19 +36,19 @@
         android:onClick="ClickHome">
 
         <TextView
+            android:id="@+id/txt_inicio"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Inicio"
+            android:text="@string/txt_inicio"
             android:padding="12dp"
-            android:layout_marginStart="16dp"
-            android:textColor="#A4A4BF"/>
+            android:layout_marginStart="16dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_home_bl"/>
+            android:src="@drawable/ic_home"/>
     </LinearLayout>
 
     <LinearLayout
@@ -59,19 +59,19 @@
         android:onClick="ClickPerfil">
 
         <TextView
+            android:id="@+id/txt_perfil"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Perfil"
+            android:text="@string/txt_perfil"
             android:padding="12dp"
-            android:layout_marginStart="16dp"
-            android:textColor="#A4A4BF"/>
+            android:layout_marginStart="16dp"/>
         
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_account_bl"/>
+            android:src="@drawable/ic_account"/>
     </LinearLayout>
     
     <LinearLayout
@@ -82,45 +82,21 @@
         android:onClick="ClickConfiguracion">
         
         <TextView
+            android:id="@+id/txt_configuracion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Configuracion"
+            android:text="@string/txt_configuracion"
             android:padding="12dp"
-            android:layout_marginStart="16dp"
-            android:textColor="#A4A4BF"/>
+            android:layout_marginStart="16dp"/>
         
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_settings_bl"/>
+            android:src="@drawable/ic_settings"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:onClick="ClickRent">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Ver Departamentos"
-            android:padding="12dp"
-            android:layout_marginStart="16dp"
-            android:textColor="#A4A4BF"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_rent_bl"/>
-
-    </LinearLayout>
-    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -129,20 +105,20 @@
         android:onClick="ClickLogout">
 
         <TextView
+            android:id="@+id/txt_cerrar_sesion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cerrar Sesion"
+            android:text="@string/txt_cerrar_sesion"
             android:padding="12dp"
-            android:layout_marginStart="16dp"
-            android:textColor="#A4A4BF"/>
+            android:layout_marginStart="16dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_power_bl"/>
+            android:src="@drawable/ic_logout"/>
 
     </LinearLayout>
-    
+
 </LinearLayout>
