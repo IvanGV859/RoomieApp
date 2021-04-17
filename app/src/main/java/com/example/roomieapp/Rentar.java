@@ -7,7 +7,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,6 +33,9 @@ public class Rentar extends AppCompatActivity {
     private EditText descripcion;
     private EditText lugar;
     private EditText costo;
+    private String municipio;
+
+    private Spinner comboMunicipios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +50,26 @@ public class Rentar extends AppCompatActivity {
         descripcion = findViewById(R.id.txt_descripDepa);
         lugar = findViewById(R.id.txt_coloniaDepa);
         costo = findViewById(R.id.txt_costoDepa);
+        comboMunicipios = findViewById(R.id.sp_municipios);
 
         drawerLayout = findViewById(R.id.drawer_layout2);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.combo_municipios, android.R.layout.simple_spinner_item);
+
+        comboMunicipios.setAdapter(adapter);
+
+        comboMunicipios.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                municipio = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
     public void subirDatos (View view){
@@ -53,9 +77,10 @@ public class Rentar extends AppCompatActivity {
         String descripDepa = descripcion.getText().toString();
         String lugarDepa = lugar.getText().toString();
         String costoDepa = costo.getText().toString();
+        String municipioDepa = municipio;
 
-        int i = (int) (Math.random() * 100 + 1);
-        final String nombre = "Departamento" + i;
+        //int i = (int) (Math.random() * 100 + 1);
+        //final String nombre = "Departamento" + i;
 
         if (!nombreDepa.isEmpty() && !lugarDepa.isEmpty() && !descripDepa.isEmpty() && !costoDepa.isEmpty()) {
 
@@ -64,8 +89,9 @@ public class Rentar extends AppCompatActivity {
             map.put("Descripcion", descripDepa);
             map.put("Lugar", lugarDepa);
             map.put("Costo", costoDepa);
+            map.put("Municipio", municipioDepa);
             String id = mAuth.getCurrentUser().getUid();
-            databaseReference.child("Departamentos").child(id).child(nombre).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+            databaseReference.child("Departamentos").child(id).child(nombreDepa).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()){

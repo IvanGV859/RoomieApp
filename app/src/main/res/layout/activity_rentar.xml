@@ -51,6 +51,11 @@
             android:hint="@string/txt_colonia"
             android:inputType="textPersonName" />
 
+        <Spinner
+            android:id="@+id/sp_municipios"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
         <EditText
             android:id="@+id/txt_costoDepa"
             android:layout_width="match_parent"
