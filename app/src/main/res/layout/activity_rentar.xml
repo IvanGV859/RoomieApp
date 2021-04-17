@@ -75,7 +75,7 @@
         android:background="@android:color/white">
 
         <include
-            layout="@layout/main_nav_drawer2"/>
+            layout="@layout/main_nav_drawer"/>
 
     </RelativeLayout>
 
