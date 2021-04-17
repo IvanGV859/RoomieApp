@@ -20,26 +20,26 @@ public class Configuracion extends AppCompatActivity {
 
     public void ClickMenu (View view){
         //Open drawer
-        InterfazPrincipal.openDrawer(drawerLayout);
+        Buscar.openDrawer(drawerLayout);
     }
 
     public void ClickLogo(View view){
         //Closer Drawer
-        InterfazPrincipal.closerDrawer(drawerLayout);
+        Buscar.closerDrawer(drawerLayout);
     }
 
     public void ClickHome(View view){
         //Redirect activity to home
-        InterfazPrincipal.redirectActivity(this,InterfazPrincipal.class);
+        Buscar.redirectActivity(this, Buscar.class);
     }
 
     public void ClickPerfil(View view){
         //Redirect activity ti dashboar
-        InterfazPrincipal.redirectActivity(this, Perfil.class);
+        Buscar.redirectActivity(this, Perfil.class);
     }
     public void ClickRent(View view){
         //Redirect activity ti dashboar
-        InterfazPrincipal.redirectActivity(this, Rentar.class);
+        Buscar.redirectActivity(this, Rentar.class);
     }
 
     public void ClickConfiguracion(View view){
@@ -50,14 +50,14 @@ public class Configuracion extends AppCompatActivity {
 
     public void ClickLogout(View view){
         //Close app
-        InterfazPrincipal.logout(this);
+        Buscar.logout(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         //Closer Drawer
-        InterfazPrincipal.closerDrawer(drawerLayout);
+        Buscar.closerDrawer(drawerLayout);
     }
 
 }

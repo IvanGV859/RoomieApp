@@ -30,7 +30,7 @@ public class Principal extends AppCompatActivity {
     }
 
     public void Principal (View view){
-        Intent i = new Intent(this, InterfazPrincipal.class);
+        Intent i = new Intent(this, Buscar.class);
         startActivity(i);
     }
 
