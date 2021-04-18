@@ -24,10 +24,6 @@
             android:textSize="50sp"
             android:textStyle="bold"
             android:gravity="center"/>
-        
-        
-
-
 
     </LinearLayout>
     <RelativeLayout

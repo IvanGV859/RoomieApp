@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Menú de Buscar Roomie"
+            android:text="@string/txt_fondo_provicional"
             android:textSize="40dp"
             android:textStyle="bold"
             android:gravity="center"/>
