@@ -27,7 +27,36 @@
     <string name="txt_rentar">Rent Apartment</string>
     <string name="txt_cerrar_sesion">Log Out</string>
     <string name="txt_menu_principal">Home</string>
+    <string name="txt_idioma">Languaje</string>
+    <string name="txt_cambiar_lenguaje">Choose Languaje</string>
+    <string name="txt_fondo_provicional">Roomie Search menu</string>
+
+    <string name="txt_ingles">English</string>
+    <string name="txt_español">Spanish</string>
 
     <string name="abrir">Open</string>
     <string name="cerrar">Close</string>
+
+
+
+    <string name="sync_pref">Sync</string>
+    <string name="sync_pref_summary">
+        Get your photos, videos, contacts, subcriptions etc on all your devices.
+    </string>
+    <string name="pref_syncConnectionType">Sync Connection Type</string>
+    <string name="pref_syncConnectionType_dialog_title">Perform Sync Using</string>
+    <string name="pref_syncConnectionType_default_vlaue">WiFi</string>
+    <string name="pref_syncConnectionType_summary">WiFi</string>
+
+    <string-array name="pref_syncConnectionType_entries">
+        <item>WiFi</item>
+        <item>Datos Móviles</item>
+        <item>WiFi/Datos móviles</item>
+    </string-array>
+
+    <string-array name="pref_syncConnectionType_values">
+        <item>WiFi</item>
+        <item>Mobile</item>
+        <item>WiFi/Mobile</item>
+    </string-array>
 </resources>

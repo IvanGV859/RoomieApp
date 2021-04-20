@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 //  lets create separate strings.xml for each languaje first
     private void showDialogoCambioLenguaje() {
         // array of lenguages to display in alert dialog
-        final String[] listItems = {"English", "Español"};
+        final String[] listItems = {"Ingles", "Español"};
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
         mBuilder.setTitle("Selecciona Idioma...");
         mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener(){

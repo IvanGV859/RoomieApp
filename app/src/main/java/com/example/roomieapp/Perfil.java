@@ -32,7 +32,7 @@ public class Perfil extends AppCompatActivity {
 
     public void ClickHome(View view){
         //Redirect activity to home
-        Buscar.redirectActivity(this, Buscar.class);
+        Buscar.redirectActivity(this, Principal.class);
     }
 
     public void ClickPerfil(View view){

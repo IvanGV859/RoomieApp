@@ -19,6 +19,8 @@
     <string name="txt_colonia">Colonia</string>
     <string name="txt_costo">Costo por mes</string>
     <string name="bt_subirdatos">Subir Datos</string>
+    <string name="txt_idioma">Idioma</string>
+    <string name="txt_cambiar_lenguaje">Cambiar Lenguaje</string>
 
     <string name="txt_inicio">Inicio</string>
     <string name="txt_perfil">Perfil</string>
@@ -26,8 +28,35 @@
     <string name="txt_rentar">Rentar Departamento</string>
     <string name="txt_cerrar_sesion">Cerrar Sesion</string>
     <string name="txt_menu_principal">Menú Principal</string>
+    <string name="txt_fondo_provicional">Menú de Buscar Roomie</string>
 
+
+    <string name="txt_ingles">Ingles</string>
+    <string name="txt_español">Español</string>
 
     <string name="abrir">Abrir</string>
     <string name="cerrar">Cerrar</string>
+
+
+
+    <string name="sync_pref">Sincronizacion</string>
+    <string name="sync_pref_summary">
+        Obtén tus fotos, videos, contactos, subcripciones, etc en todos tus dispositivos.
+    </string>
+    <string name="pref_syncConnectionType">Tipo de conexión de sincronización</string>
+    <string name="pref_syncConnectionType_dialog_title">Realizar la sincronización utilizada</string>
+    <string name="pref_syncConnectionType_default_vlaue">WiFi</string>
+    <string name="pref_syncConnectionType_summary">WiFi</string>
+
+    <string-array name="pref_syncConnectionType_entries">
+        <item>WiFi</item>
+        <item>Datos Móviles</item>
+        <item>WiFi/Datos móviles</item>
+    </string-array>
+
+    <string-array name="pref_syncConnectionType_values">
+        <item>WiFi</item>
+        <item>Móvil</item>
+        <item>WiFi/Datos móviles</item>
+    </string-array>
 </resources>
