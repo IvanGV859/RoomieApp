@@ -91,7 +91,7 @@ public class Rentar extends AppCompatActivity {
             map.put("Costo", costoDepa);
             map.put("Municipio", municipioDepa);
             String id = mAuth.getCurrentUser().getUid();
-            databaseReference.child("Departamentos").child(id).child(nombreDepa).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+            databaseReference.child("Departamentos").child(nombreDepa).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()){
@@ -110,6 +110,10 @@ public class Rentar extends AppCompatActivity {
             Toast.makeText(this, "Favor de llenar todos los campos", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+
+
 
     public void ClickMenu (View view){
         //Open drawer

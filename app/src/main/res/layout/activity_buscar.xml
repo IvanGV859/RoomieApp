@@ -11,57 +11,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="5sp">
+        android:orientation="vertical">
 
         <include
             layout="@layout/main_toolbar"
             android:layout_width="70dp"
             android:layout_height="70dp" />
 
-        <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_departamentos"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Departamentos"
-            android:textColor="#16235A"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/txt_nombreDepa_FB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nombre del departamento: "
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/txt_municipio_FB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Municipio: "
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/txt_colonia_FB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Colonia: "
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/txt_descripcion_FB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Descripcion: "
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/txt_costo_FB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Costo por mes: "
-            android:textSize="18sp" />
 
     </LinearLayout>
 

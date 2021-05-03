@@ -1,9 +1,9 @@
 package com.example.roomieapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -11,27 +11,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import java.util.List;
 
 public class Buscar extends AppCompatActivity {
     //Initialize variable
     DrawerLayout drawerLayout;
-
-    private DatabaseReference databaseReference;
-    private FirebaseAuth firebaseAuth;
-
-    private TextView nombre;
-    private TextView municipio;
-    private TextView colonia;
-    private TextView descripcion;
-    private TextView costo;
+    private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,42 +26,41 @@ public class Buscar extends AppCompatActivity {
 
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
-
-        databaseReference = FirebaseDatabase.getInstance().getReference();
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        nombre = findViewById(R.id.txt_nombreDepa_FB);
-        municipio = findViewById(R.id.txt_municipio_FB);
-        colonia = findViewById(R.id.txt_colonia_FB);
-        descripcion = findViewById(R.id.txt_descripcion_FB);
-        costo = findViewById(R.id.txt_costo_FB);
-
-        String id = firebaseAuth.getCurrentUser().getUid();
-        databaseReference.child("Departamentos").child(id).child("Busco 2 roomies").addValueEventListener(new ValueEventListener() {
+        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView_departamentos);
+        new FirebaseDatabaseHelper().readDepartamentos(new FirebaseDatabaseHelper.DataStatus() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                if (snapshot.exists()) {
-                    String nombreFB = snapshot.child("Nombre").getValue().toString();
-                    String municipioFB = snapshot.child("Municipio").getValue().toString();
-                    String coloniaFB = snapshot.child("Lugar").getValue().toString();
-                    String descripcionFB = snapshot.child("Descripcion").getValue().toString();
-                    String costoFB = snapshot.child("Costo").getValue().toString();
-
-                    nombre.setText("Nombre del departamento: " + nombreFB);
-                    municipio.setText("Municipio: " + municipioFB);
-                    colonia.setText("Colonia: " + coloniaFB);
-                    descripcion.setText("Descripcion: " + descripcionFB);
-                    costo.setText("Costo por mes: " + costoFB);
-                }
+            public void DataIsLoaded(List<Departamento> departamentos, List<String> keys) {
+                new RecyclerView_Config().setConfig(mRecyclerView,Buscar.this,
+                        departamentos, keys);
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+            public void DataIsInserted() {
+
+            }
+
+            @Override
+            public void DataIsUpdate() {
+
+            }
+
+            @Override
+            public void DataIsDeleted() {
 
             }
         });
+
+
     }
+
+
+
+
+
+
+
+
+
 
     public void ClickMenu (View view){
         //Open drawer
