@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/txt_costo"
-            android:inputType="number" />
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/button7"
