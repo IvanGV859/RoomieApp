@@ -39,11 +39,9 @@ public class Principal extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void SalirSesion (View view){
-        mAuth.signOut();
-        Intent i = new Intent(this, MainActivity.class);
+    public void ClickMensajeria (View view){
+        Intent i = new Intent(this, Mensajeria.class);
         startActivity(i);
-        finish();
     }
     public void ClickMenu (View view){
         //Open drawer
