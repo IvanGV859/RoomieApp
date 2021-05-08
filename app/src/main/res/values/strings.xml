@@ -21,6 +21,7 @@
     <string name="bt_subirdatos">Subir Datos</string>
     <string name="txt_idioma">Idioma</string>
     <string name="txt_cambiar_lenguaje">Cambiar Lenguaje</string>
+    <string name="txt_mensajeria">Mensajes</string>
 
     <string name="txt_inicio">Inicio</string>
     <string name="txt_perfil">Perfil</string>
@@ -36,7 +37,6 @@
 
     <string name="abrir">Abrir</string>
     <string name="cerrar">Cerrar</string>
-
 
 
     <string name="sync_pref">Sincronizacion</string>
