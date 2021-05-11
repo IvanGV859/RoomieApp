@@ -1,8 +1,11 @@
 package com.example.roomieapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
@@ -12,12 +15,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.roomieapp.adapter.AdapterDepartamentos;
+import com.example.roomieapp.pojo.Departamentos;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Buscar extends AppCompatActivity {
     //Initialize variable
     DrawerLayout drawerLayout;
-    private RecyclerView mRecyclerView;
+
+    DatabaseReference databaseReference;
+    ArrayList<Departamentos> list;
+    RecyclerView recyclerView;
+    SearchView searchView;
+    AdapterDepartamentos adapter;
+
+    private LinearLayoutManager lm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,40 +45,60 @@ public class Buscar extends AppCompatActivity {
 
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView_departamentos);
-        new FirebaseDatabaseHelper().readDepartamentos(new FirebaseDatabaseHelper.DataStatus() {
+
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Departamentos");
+        recyclerView = findViewById(R.id.recyclerView_departamentos);
+        searchView = findViewById(R.id.searchView);
+        lm = new LinearLayoutManager(this);
+
+        recyclerView.setLayoutManager(lm);
+        list = new ArrayList<>();
+        adapter = new AdapterDepartamentos(list);
+        recyclerView.setAdapter(adapter);
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void DataIsLoaded(List<Departamento> departamentos, List<String> keys) {
-                new RecyclerView_Config().setConfig(mRecyclerView,Buscar.this,
-                        departamentos, keys);
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        Departamentos ms = dataSnapshot.getValue(Departamentos.class);
+                        list.add(ms);
+                    }
+                    adapter.notifyDataSetChanged();
+                }
             }
 
             @Override
-            public void DataIsInserted() {
-
-            }
-
-            @Override
-            public void DataIsUpdate() {
-
-            }
-
-            @Override
-            public void DataIsDeleted() {
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
 
+            @Override
+            public boolean onQueryTextChange(String s) {
+                buscar(s);
+                return true;
+            }
+        });
+    } //Fin del onCreate
+
+    private void buscar(String s)
+    {
+        ArrayList<Departamentos> milista = new ArrayList<>();
+        for (Departamentos obj : list) {
+            if (obj.getMunicipio().toLowerCase().contains(s.toLowerCase())) {
+                milista.add(obj);
+            }
+        }
+        AdapterDepartamentos adapter = new AdapterDepartamentos(milista);
+        recyclerView.setAdapter(adapter);
     }
-
-
-
-
-
-
-
-
 
 
     public void ClickMenu (View view){
