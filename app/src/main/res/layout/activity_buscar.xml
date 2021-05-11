@@ -19,6 +19,13 @@
             android:layout_width="70dp"
             android:layout_height="70dp" />
 
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView_departamentos"
             android:layout_width="match_parent"
