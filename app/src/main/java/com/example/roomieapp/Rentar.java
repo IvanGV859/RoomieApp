@@ -84,13 +84,14 @@ public class Rentar extends AppCompatActivity {
 
         if (!nombreDepa.isEmpty() && !lugarDepa.isEmpty() && !descripDepa.isEmpty() && !costoDepa.isEmpty()) {
 
+            String id = mAuth.getCurrentUser().getUid();
             Map<String, Object> map = new HashMap<>();
             map.put("Nombre", nombreDepa);
             map.put("Descripcion", descripDepa);
             map.put("Lugar", lugarDepa);
             map.put("Costo", costoDepa);
             map.put("Municipio", municipioDepa);
-            String id = mAuth.getCurrentUser().getUid();
+            map.put("Usuario", id);
             databaseReference.child("Departamentos").child(nombreDepa).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
