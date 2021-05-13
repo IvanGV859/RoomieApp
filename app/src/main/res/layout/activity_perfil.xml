@@ -17,13 +17,21 @@
             android:layout_width="70dp"
             android:layout_height="70dp" />
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/txt_nombreUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre de Usuario"
+            android:textSize="25dp"
+            android:gravity="center_horizontal"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_Perfil"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Perfil"
-            android:textSize="50sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            />
+
 
     </LinearLayout>
     <RelativeLayout
