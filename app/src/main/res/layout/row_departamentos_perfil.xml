@@ -61,7 +61,7 @@
                 android:id="@+id/bt_eliminar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Borrar Departamento" />
+                android:text="@string/txt_borrar_depa" />
 
         </LinearLayout>
 
