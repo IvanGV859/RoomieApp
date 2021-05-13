@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:backgroundTint="@color/common_google_signin_btn_text_light_default"
+        android:backgroundTint="#16235A"
         app:cardCornerRadius="5dp"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
@@ -20,35 +20,40 @@
             <TextView
                 android:id="@+id/txt_nombreDepaPerfil"
                 android:text="Nombre: "
-                android:textSize="25dp"
+                android:textSize="23dp"
+                android:textColor="#FFFFFF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/txt_descripPerfil"
                 android:text="Descripcion: "
-                android:textSize="25dp"
+                android:textSize="15dp"
+                android:textColor="#FFFFFF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/txt_coloniaPerfil"
                 android:text="Colonia: "
-                android:textSize="25dp"
+                android:textSize="15dp"
+                android:textColor="#FFFFFF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/txt_municipioPerfil"
                 android:text="Municipio: "
-                android:textSize="25dp"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/txt_costoPerfil"
-                android:text="Costos: $"
-                android:textSize="25dp"
+                android:text="$ "
+                android:textSize="23dp"
+                android:textColor="#FFFFFF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
