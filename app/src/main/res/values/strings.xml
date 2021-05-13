@@ -22,6 +22,8 @@
     <string name="txt_idioma">Idioma</string>
     <string name="txt_cambiar_lenguaje">Cambiar Lenguaje</string>
     <string name="txt_mensajeria">Mensajes</string>
+    <string name="txt_mensaje">Enviar Mensaje</string>
+    <string name="txt_borrar_depa">Borrar Departamento</string>
 
     <string name="txt_inicio">Inicio</string>
     <string name="txt_perfil">Perfil</string>

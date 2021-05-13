@@ -13,6 +13,7 @@
         android:src="@drawable/ic_logo_bl"/>
 
     <TextView
+        android:id="@+id/txt_nombre1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ivan Gonzalez"

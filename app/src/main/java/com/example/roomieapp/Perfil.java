@@ -30,14 +30,16 @@ public class Perfil extends AppCompatActivity {
     //Initialize variable
     DrawerLayout drawerLayout;
 
-    DatabaseReference databaseReference;
+
     ArrayList<Departamentos> list;
     RecyclerView recyclerView;
     AdapterDepartamentosPerfil adapter;
+    DatabaseReference databaseReference;
 
+    private TextView nombreUsuario;
     private LinearLayoutManager lm;
     private FirebaseAuth mAuth;
-    private TextView nombreUsuario;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -20,6 +20,8 @@
     <string name="txt_colonia">Suburb</string>
     <string name="txt_costo">Cost per Month</string>
     <string name="bt_subirdatos">Upload Data</string>
+    <string name="txt_mensaje">Send Message</string>
+    <string name="txt_borrar_depa">Delet Departament</string>
 
     <string name="txt_inicio">Home</string>
     <string name="txt_perfil">Profile</string>
