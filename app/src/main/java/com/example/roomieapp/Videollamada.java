@@ -42,7 +42,7 @@ public class Videollamada extends AppCompatActivity {
 
         joinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
                         .setRoom(secretCodeBox.getText().toString())
                         .setWelcomePageEnabled(false)
