@@ -46,6 +46,10 @@ public class Principal extends AppCompatActivity {
         Intent i = new Intent(this, Mensajeria.class);
         startActivity(i);
     }
+    public void ClickVideollamada (View view){
+        Intent i = new Intent(this, Videollamada.class);
+        startActivity(i);
+    }
     public void ClickMenu (View view){
         //Open drawer
         openDrawer(drawerLayout);

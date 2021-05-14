@@ -8,6 +8,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+
         
     }
     dependencies {
@@ -26,6 +27,9 @@ allprojects {
     repositories {
         google()  // Google's Maven repository
         jcenter()
+        maven {
+            url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
+        }
         
     }
 }
