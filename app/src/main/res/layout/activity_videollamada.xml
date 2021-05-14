@@ -7,16 +7,7 @@
     android:background="#16235A"
     tools:context=".Videollamada">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E3E3E3"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
