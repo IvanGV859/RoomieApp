@@ -2,6 +2,7 @@ package com.example.roomieapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,6 @@ public class Videollamada extends AppCompatActivity {
 
         secretCodeBox = findViewById(R.id.codeBox);
         joinBtn = findViewById(R.id.joinBtn);
-        shareBtn = findViewById(R.id.shareBtn);
 
         URL serverURL;
 
@@ -52,5 +52,9 @@ public class Videollamada extends AppCompatActivity {
             }
         });
 
+    }
+    public void RegresarBtn (View view){
+        Intent i = new Intent(this, Principal.class);
+        startActivity(i);
     }
 }

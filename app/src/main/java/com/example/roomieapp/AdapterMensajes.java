@@ -8,21 +8,23 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static com.example.roomieapp.R.layout.card_view_mensajes;
 
 public class AdapterMensajes extends RecyclerView.Adapter<HolderMensaje> {
 
-    List<Mensaje> listMensaje = new ArrayList<>();
+    List<MensajeRecibir> listMensaje = new ArrayList<>();
     private Context c;
 
     public AdapterMensajes(Context c) {
         this.c = c;
     }
 
-    public void addMensaje(Mensaje m){
+    public void addMensaje(MensajeRecibir m){
         listMensaje.add(m);
         notifyItemInserted(listMensaje.size());
     }
@@ -37,9 +39,15 @@ public class AdapterMensajes extends RecyclerView.Adapter<HolderMensaje> {
     public void onBindViewHolder(@NonNull HolderMensaje holder, int position) {
         holder.getNombre().setText(listMensaje.get(position).getNombre());
         holder.getMensaje().setText(listMensaje.get(position).getMensaje());
-        holder.getHora().setText(listMensaje.get(position).getHora());
 
+
+        Long codigoHora = listMensaje.get(position).getHora();
+        Date d = new Date(codigoHora);
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
+        holder.getHora().setText(sdf.format(d));
     }
+
+
 
     @Override
     public int getItemCount() {
