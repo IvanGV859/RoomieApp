@@ -84,7 +84,7 @@ public class Perfil extends AppCompatActivity {
         databaseReference.child("Usuarios").child(id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String nombre = snapshot.child("name").getValue().toString();
+                String nombre = snapshot.child("Usuario").getValue().toString();
                 nombreUsuario.setText(nombre);
             }
 
