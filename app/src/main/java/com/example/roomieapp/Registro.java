@@ -72,7 +72,8 @@ public class Registro extends AppCompatActivity {
                             user.sendEmailVerification();
 
                             Map<String, Object> map = new HashMap<>();
-                            map.put("name", name);
+                            map.put("Usuario", name);
+                            map.put("Correo", email);
                             String id = mAuth.getCurrentUser().getUid();
                             databaseReference.child("Usuarios").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
