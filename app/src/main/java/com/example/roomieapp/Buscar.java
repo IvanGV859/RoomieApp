@@ -74,6 +74,7 @@ public class Buscar extends AppCompatActivity {
             }
         });
 
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -88,6 +89,10 @@ public class Buscar extends AppCompatActivity {
         });
     } //Fin del onCreate
 
+    public void MensajeOmar (View view){
+        Intent i = new Intent(this, Main2Activity.class);
+        startActivity(i);
+    }
     private void buscar(String s)
     {
         ArrayList<Departamentos> milista = new ArrayList<>();

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_index"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Videollamada"></activity>
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".Videollamada" />
         <activity android:name=".Mensajeria" />
         <activity android:name=".Rentar" />
         <activity android:name=".Configuracion" />

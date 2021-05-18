@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:gravity="center"
-                android:text="Por favor escribe el nombre del usuario con quien deseas hacer videollamada" />
+                android:text="Por favor escribe el nombre del codigo con quien deseas hacer videollamada" />
 
             <EditText
                 android:id="@+id/codeBox"
@@ -47,7 +47,7 @@
                 android:background="#EAE5E5"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="Usuario"
+                android:hint="Codigo"
                 android:inputType="textPersonName"
                 android:padding="10dp" />
 
@@ -67,19 +67,19 @@
                     android:paddingRight="20dp"
                     android:text="Unirte"
                     android:textColor="@android:color/white" />
-                A
+
                 <Button
-                    android:id="@+id/shareBtn"
+                    android:id="@+id/backBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:background="#17257E"
-                    android:drawablePadding="20dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Publicar"
-                    android:textColor="@android:color/white" />
+                    android:text="Regresar"
+                    android:textColor="@android:color/white"
+                    android:onClick="RegresarBtn"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

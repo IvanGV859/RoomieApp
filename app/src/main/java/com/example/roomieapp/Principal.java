@@ -43,7 +43,7 @@ public class Principal extends AppCompatActivity {
     }
 
     public void ClickMensajeria (View view){
-        Intent i = new Intent(this, Mensajeria.class);
+        Intent i = new Intent(this, Main2Activity.class);
         startActivity(i);
     }
     public void ClickVideollamada (View view){
