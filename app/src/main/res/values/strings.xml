@@ -31,6 +31,7 @@
     <string name="txt_enviar">Enviar</string>
     <string name="txt_mensajed">Escribe un mensaje</string>
     <string name="txt_videollamada">Videollamada</string>
+    <string name="txt_municipio">Seleccione un municipio:</string>
 
     <string name="txt_inicio">Inicio</string>
     <string name="txt_perfil">Perfil</string>
