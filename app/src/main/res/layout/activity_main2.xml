@@ -24,6 +24,17 @@
             android:layout_height="wrap_content"
             android:text="Omar Lopez"
             android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:onClick="ClickHome"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/txt_regresar" />
+
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMensajes"
@@ -46,13 +57,14 @@
             android:id="@+id/txtMensaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Escribe un mensaje"
+            android:hint="@string/txt_mensajed"
             android:layout_weight="1"/>
 
         <Button
             android:id="@+id/btnEnviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enviar"/>
+            android:hint="@string/txt_enviar"/>
     </LinearLayout>
+
 </LinearLayout>

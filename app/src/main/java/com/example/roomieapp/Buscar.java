@@ -14,9 +14,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.roomieapp.adapter.AdapterDepartamentos;
 import com.example.roomieapp.pojo.Departamentos;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,13 +32,15 @@ public class Buscar extends AppCompatActivity {
     //Initialize variable
     DrawerLayout drawerLayout;
 
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference, databaseReference1;
     ArrayList<Departamentos> list;
     RecyclerView recyclerView;
     SearchView searchView;
     AdapterDepartamentos adapter;
 
     private LinearLayoutManager lm;
+    private TextView nombreUsuario;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +50,15 @@ public class Buscar extends AppCompatActivity {
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
 
+        mAuth = FirebaseAuth.getInstance();
+        String id = mAuth.getCurrentUser().getUid();
+
+        databaseReference1 = FirebaseDatabase.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Departamentos");
         recyclerView = findViewById(R.id.recyclerView_departamentos);
         searchView = findViewById(R.id.searchView);
         lm = new LinearLayoutManager(this);
+        nombreUsuario = (TextView) findViewById(R.id.txt_nombre1);
 
         recyclerView.setLayoutManager(lm);
         list = new ArrayList<>();
@@ -85,6 +94,19 @@ public class Buscar extends AppCompatActivity {
             public boolean onQueryTextChange(String s) {
                 buscar(s);
                 return true;
+            }
+        });
+
+        databaseReference1.child("Usuarios").child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String nombre = snapshot.child("Usuario").getValue().toString();
+                nombreUsuario.setText(nombre);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     } //Fin del onCreate

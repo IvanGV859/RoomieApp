@@ -24,6 +24,13 @@
     <string name="txt_mensajeria">Mensajes</string>
     <string name="txt_mensaje">Enviar Mensaje</string>
     <string name="txt_borrar_depa">Borrar Departamento</string>
+    <string name="txt_descripcion_videollamada">Por favor escribe el nombre del codigo con quien deseas hacer videollamada</string>
+    <string name="txt_codigo">Código</string>
+    <string name="txt_unirte">Unirte</string>
+    <string name="txt_regresar">Regresar</string>
+    <string name="txt_enviar">Enviar</string>
+    <string name="txt_mensajed">Escribe un mensaje</string>
+    <string name="txt_videollamada">Videollamada</string>
 
     <string name="txt_inicio">Inicio</string>
     <string name="txt_perfil">Perfil</string>

@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:gravity="center"
-                android:text="Por favor escribe el nombre del codigo con quien deseas hacer videollamada" />
+                android:text="@string/txt_descripcion_videollamada" />
 
             <EditText
                 android:id="@+id/codeBox"
@@ -47,7 +47,7 @@
                 android:background="#EAE5E5"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="Codigo"
+                android:hint="@string/txt_codigo"
                 android:inputType="textPersonName"
                 android:padding="10dp" />
 
@@ -65,7 +65,7 @@
                     android:background="#17257E"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Unirte"
+                    android:text="@string/txt_unirte"
                     android:textColor="@android:color/white" />
 
                 <Button
@@ -77,7 +77,7 @@
                     android:background="#17257E"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Regresar"
+                    android:text="@string/txt_regresar"
                     android:textColor="@android:color/white"
                     android:onClick="RegresarBtn"/>
             </LinearLayout>
