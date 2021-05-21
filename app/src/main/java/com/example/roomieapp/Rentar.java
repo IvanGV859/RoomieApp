@@ -11,13 +11,17 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,6 +38,7 @@ public class Rentar extends AppCompatActivity {
     private EditText lugar;
     private EditText costo;
     private String municipio;
+    private TextView nombreUsuario;
 
     private Spinner comboMunicipios;
 
@@ -44,6 +49,7 @@ public class Rentar extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+        String id = mAuth.getCurrentUser().getUid();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         nombre = findViewById(R.id.txt_nombreDepa);
@@ -51,6 +57,7 @@ public class Rentar extends AppCompatActivity {
         lugar = findViewById(R.id.txt_coloniaDepa);
         costo = findViewById(R.id.txt_costoDepa);
         comboMunicipios = findViewById(R.id.sp_municipios);
+        nombreUsuario = (TextView) findViewById(R.id.txt_nombre2);
 
         drawerLayout = findViewById(R.id.drawer_layout2);
 
@@ -67,6 +74,18 @@ public class Rentar extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        databaseReference.child("Usuarios").child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String nombre = snapshot.child("Usuario").getValue().toString();
+                nombreUsuario.setText(nombre);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });

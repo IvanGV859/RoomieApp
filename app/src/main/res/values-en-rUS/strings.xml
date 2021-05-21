@@ -22,6 +22,8 @@
     <string name="bt_subirdatos">Upload Data</string>
     <string name="txt_mensaje">Send Message</string>
     <string name="txt_borrar_depa">Delet Departament</string>
+    <string name="txt_videollamada">Video call</string>
+    <string name="txt_municipio">Select a municipality:</string>
 
     <string name="txt_inicio">Home</string>
     <string name="txt_perfil">Profile</string>
@@ -33,6 +35,12 @@
     <string name="txt_cambiar_lenguaje">Choose Languaje</string>
     <string name="txt_fondo_provicional">Roomie Search menu</string>
     <string name="txt_mensajeria">Menssages</string>
+    <string name="txt_descripcion_videollamada">Please enter the name of the code with which you want to make video call</string>
+    <string name="txt_codigo">Code</string>
+    <string name="txt_regresar">Back</string>
+    <string name="txt_unirte">Join</string>
+    <string name="txt_enviar">Send</string>
+    <string name="txt_mensajed">Type a message</string>
 
     <string name="txt_ingles">English</string>
     <string name="txt_español">Spanish</string>

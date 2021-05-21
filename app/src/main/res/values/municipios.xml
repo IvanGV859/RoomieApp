@@ -2,7 +2,7 @@
 <resources>
 
     <string-array name="combo_municipios">
-        <item>Seleccione un municipio:</item>
+        <item>@string/txt_municipio</item>
         <item>Abasolo</item>
         <item>Agualeguas</item>
         <item>Los Aldamas</item>

@@ -1,5 +1,6 @@
 package com.example.roomieapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.core.view.GravityCompat;
@@ -14,11 +15,18 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Principal extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     DrawerLayout drawerLayout;
+    private TextView nombreUsuario;
+    DatabaseReference databaseReference;
 
 
     @Override
@@ -29,6 +37,24 @@ public class Principal extends AppCompatActivity {
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
         mAuth = FirebaseAuth.getInstance();
+        String id = mAuth.getCurrentUser().getUid();
+        nombreUsuario = (TextView) findViewById(R.id.txt_nombre);
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
+
+
+        databaseReference.child("Usuarios").child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String nombre = snapshot.child("Usuario").getValue().toString();
+                nombreUsuario.setText(nombre);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
 

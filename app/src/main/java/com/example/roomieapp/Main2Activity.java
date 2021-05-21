@@ -16,12 +16,14 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -35,14 +37,16 @@ public class Main2Activity extends AppCompatActivity {
     private RecyclerView rvMensajes;
     private EditText txtMensaje;
     private Button btnEnviar;
+    private TextView nombreUsuario;
 
     private AdapterMensajes adapter;
     private ImageButton btnEnviarFoto;
 
     private FirebaseDatabase database;
-    private DatabaseReference databaseReference;
+    private DatabaseReference databaseReference, databaseReference2;
     private FirebaseStorage storage;
     private StorageReference storageReference;
+    private FirebaseAuth mAuth;
     private static final int PHOTO_SEND = 1;
 
     @Override
@@ -56,10 +60,15 @@ public class Main2Activity extends AppCompatActivity {
         txtMensaje = (EditText) findViewById(R.id.txtMensaje);
         btnEnviar = (Button) findViewById(R.id.btnEnviar);
         btnEnviarFoto = (ImageButton) findViewById(R.id.btnEnviarFoto);
+        nombreUsuario = (TextView) findViewById(R.id.nombre);
 
+
+        mAuth = FirebaseAuth.getInstance();
+        String id = mAuth.getCurrentUser().getUid();
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("chat"); //Sala de chat (nombre)
         storage = FirebaseStorage.getInstance();
+        databaseReference2 = FirebaseDatabase.getInstance().getReference();
 
 
         adapter = new AdapterMensajes(this);
@@ -121,6 +130,23 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+        databaseReference2.child("Usuarios").child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String nombre = snapshot.child("Usuario").getValue().toString();
+                nombreUsuario.setText(nombre);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+    public void ClickHome (View view){
+        Intent i = new Intent(this, Principal.class);
+        startActivity(i);
     }
 
     private void setScrollbar(){
