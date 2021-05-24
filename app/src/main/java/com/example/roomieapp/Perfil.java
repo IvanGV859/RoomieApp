@@ -37,7 +37,7 @@ public class Perfil extends AppCompatActivity {
     AdapterDepartamentosPerfil adapter;
     DatabaseReference databaseReference, datareference1;
 
-    private TextView nombreUsuario;
+    private TextView nombreUsuario, nombreUsuarioPerfil;
     private LinearLayoutManager lm;
     private FirebaseAuth mAuth;
 
@@ -53,6 +53,7 @@ public class Perfil extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         String id = mAuth.getCurrentUser().getUid();
         nombreUsuario = (TextView) findViewById(R.id.txt_nombre1);
+        nombreUsuarioPerfil = (TextView) findViewById(R.id.txt_nombreUsuario);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
         datareference1 = FirebaseDatabase.getInstance().getReference();
@@ -91,6 +92,7 @@ public class Perfil extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String nombre = snapshot.child("Usuario").getValue().toString();
                 nombreUsuario.setText(nombre);
+                nombreUsuarioPerfil.setText(nombre);
             }
 
             @Override
