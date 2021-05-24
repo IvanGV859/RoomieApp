@@ -21,7 +21,8 @@
     <string name="txt_costo">Cost per Month</string>
     <string name="bt_subirdatos">Upload Data</string>
     <string name="txt_mensaje">Send Message</string>
-    <string name="txt_borrar_depa">Delet Departament</string>
+    <string name="txt_editar_depa">Edit Department</string>
+    <string name="bt_eliminar">Delete Department</string>
     <string name="txt_videollamada">Video call</string>
     <string name="txt_municipio">Select a municipality:</string>
 
