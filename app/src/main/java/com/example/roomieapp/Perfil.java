@@ -7,6 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -66,6 +67,9 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
+
+                    list.clear();
+
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                         Departamentos ms = dataSnapshot.getValue(Departamentos.class);
                         list.add(ms);

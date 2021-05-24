@@ -23,7 +23,8 @@
     <string name="txt_cambiar_lenguaje">Cambiar Lenguaje</string>
     <string name="txt_mensajeria">Mensajes</string>
     <string name="txt_mensaje">Enviar Mensaje</string>
-    <string name="txt_borrar_depa">Borrar Departamento</string>
+    <string name="txt_editar_depa">Editar Departamento</string>
+    <string name="bt_eliminar">Eliminar departamento</string>
     <string name="txt_descripcion_videollamada">Por favor escribe el nombre del codigo con quien deseas hacer videollamada</string>
     <string name="txt_codigo">Código</string>
     <string name="txt_unirte">Unirte</string>
