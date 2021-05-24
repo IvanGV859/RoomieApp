@@ -52,7 +52,7 @@ public class Perfil extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         String id = mAuth.getCurrentUser().getUid();
-        nombreUsuario = (TextView) findViewById(R.id.txt_nombreUsuario);
+        nombreUsuario = (TextView) findViewById(R.id.txt_nombre1);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
         recyclerView = findViewById(R.id.recyclerView_Perfil);

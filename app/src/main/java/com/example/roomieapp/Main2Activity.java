@@ -153,6 +153,29 @@ public class Main2Activity extends AppCompatActivity {
         rvMensajes.scrollToPosition(adapter.getItemCount()-1);
     }
 
+    /*
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == PHOTO_SEND && resultCode == RESULT_OK){
+            Uri u = data.getData();
+            storageReference = storage.getReference("imagenes_chat");//imagenes_chat
+            final StorageReference fotoReferencia = storageReference.child(u.getLastPathSegment());
+            fotoReferencia.putFile(u).addOnSuccessListener(this, new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            String url = uri.toString();
+                        }
+                    });
+                    Mensaje m = new Mensaje("Se a enviado una foto",u.toString(),nombre.getText().toString(),"","2");
+                    databaseReference.push().setValue(m);
+                }
+            });
+        }
+    }*/
 
 
 }
