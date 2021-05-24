@@ -35,7 +35,7 @@ public class Perfil extends AppCompatActivity {
     ArrayList<Departamentos> list;
     RecyclerView recyclerView;
     AdapterDepartamentosPerfil adapter;
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference, datareference1;
 
     private TextView nombreUsuario;
     private LinearLayoutManager lm;
@@ -55,6 +55,7 @@ public class Perfil extends AppCompatActivity {
         nombreUsuario = (TextView) findViewById(R.id.txt_nombre1);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        datareference1 = FirebaseDatabase.getInstance().getReference();
         recyclerView = findViewById(R.id.recyclerView_Perfil);
         lm = new LinearLayoutManager(this);
 
@@ -85,7 +86,7 @@ public class Perfil extends AppCompatActivity {
         });
 
 
-        databaseReference.child("Usuarios").child(id).addValueEventListener(new ValueEventListener() {
+        datareference1.child("Usuarios").child(id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String nombre = snapshot.child("Usuario").getValue().toString();
