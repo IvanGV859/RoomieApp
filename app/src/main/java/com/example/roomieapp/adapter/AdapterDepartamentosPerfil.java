@@ -70,7 +70,7 @@ public class AdapterDepartamentosPerfil extends RecyclerView.Adapter<AdapterDepa
             public void onClick(View view) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.txt_nombre.getContext())
                         .setContentHolder(new ViewHolder(R.layout.dialogcontent))
-                        .setExpanded(true, 1200)
+                        .setExpanded(true, 1600)
                         .create();
 
                 View myview = dialogPlus.getHolderView();

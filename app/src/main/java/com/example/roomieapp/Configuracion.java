@@ -1,5 +1,6 @@
 package com.example.roomieapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -11,19 +12,35 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Locale;
 
 public class Configuracion extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
+    private TextView nombreUsuario;
+    private FirebaseAuth mAuth;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion);
 
+        mAuth = FirebaseAuth.getInstance();
+        String id = mAuth.getCurrentUser().getUid();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
         drawerLayout = findViewById(R.id.drawer_layout);
+        nombreUsuario = (TextView) findViewById(R.id.txt_nombre1);
 
         if(findViewById(R.id.fragment_container)!=null)
         {
@@ -39,6 +56,18 @@ public class Configuracion extends AppCompatActivity {
             public void onClick(View view) {
                 //show AlertDialog to display list of lenguages
                 showDialogoCambioLenguaje();
+            }
+        });
+        databaseReference.child("Usuarios").child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String nombre = snapshot.child("Usuario").getValue().toString();
+                nombreUsuario.setText(nombre);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
 

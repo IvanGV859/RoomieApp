@@ -1,7 +1,5 @@
 package com.example.roomieapp;
-
 public class Departamento {
-
     private String Costo;
     private String Descripcion;
     private String Lugar;
@@ -9,7 +7,6 @@ public class Departamento {
     private String Nombre;
 
     public Departamento() {
-
     }
 
     public Departamento(String costo, String descripcion, String lugar, String municipio, String nombre) {
